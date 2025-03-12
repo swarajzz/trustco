@@ -1,12 +1,14 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
-import { MainNav } from "@/components/main-nav"
-import { AuthNav } from "@/components/auth-nav"
-import { MobileMenu } from "@/components/mobile-menu"
-import { HeroSection } from "@/components/hero-section"
-import { mainNavItems, authNavItems } from "@/data/navigation"
-import { heroData, socialElements } from "@/data/hero"
+import { MainNav } from "@/components/main-nav";
+import { AuthNav } from "@/components/auth-nav";
+import { MobileMenu } from "@/components/mobile-menu";
+import { HeroSection } from "@/components/hero-section";
+import { mainNavItems, authNavItems } from "@/data/navigation";
+import { heroData, socialElements } from "@/data/hero";
+import { BrandsSection } from "@/components/brands-section";
+import { brandsData } from "@/data/brands";
 
 export default function Home() {
   return (
@@ -40,6 +42,9 @@ export default function Home() {
         cta={heroData.cta}
         socialElements={socialElements}
       />
+
+      {/* Brands Section */}
+      <BrandsSection title={brandsData.title} brands={brandsData.brands} />
     </div>
-  )
+  );
 }
