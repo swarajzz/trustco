@@ -2,10 +2,12 @@ import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
 import { BrandsSection } from "@/components/brands-section";
 import { SalesSection } from "@/components/sales-section";
+import { BenefitsSection } from "@/components/benefits-section";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
 import { salesData } from "@/data/sales";
+import { benefitsData } from "@/data/benefits";
 
 export default function Home() {
   return (
@@ -31,6 +33,14 @@ export default function Home() {
         highlightText={salesData.highlightText}
         description={salesData.description}
         videoThumbnail={salesData.videoThumbnail}
+      />
+
+      {/* Benefits Section */}
+      <BenefitsSection
+        badge={benefitsData.badge}
+        title={benefitsData.title}
+        description={benefitsData.description}
+        benefits={benefitsData.benefits}
       />
     </div>
   );
