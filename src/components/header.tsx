@@ -22,7 +22,7 @@ export function Header({ mainItems, authItems }: HeaderProps) {
           <div>
             <Link href="/">
               <Image
-                src="/placeholder.svg?height=40&width=150"
+                src="/images/Logo/logo.png"
                 alt="Trustco Logo"
                 width={150}
                 height={40}

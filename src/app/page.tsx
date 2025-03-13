@@ -9,7 +9,7 @@ import { BridgesSection } from "@/components/bridges-section";
 import { TestimonialsSection } from "@/components/testimonials-section-static";
 import { BlogSection } from "@/components/blog-section";
 import { CTASection } from "@/components/cta-section";
-import { TrainersSection } from "@/components/trainers-section";
+import { Footer } from "@/components/footer";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
@@ -21,7 +21,7 @@ import { bridgesData } from "@/data/bridges";
 import { testimonialsData } from "@/data/testimonials";
 import { blogData } from "@/data/blog";
 import { ctaData } from "@/data/cta";
-import { trainersData } from "@/data/trainers";
+import { footerData } from "@/data/footer";
 
 export default function Home() {
   return (
@@ -108,13 +108,19 @@ export default function Home() {
         image={ctaData.image}
       />
 
-      {/* Trainers Section */}
-      <TrainersSection
-        creditText={trainersData.creditText}
-        academyName={trainersData.academyName}
-        academyLink={trainersData.academyLink}
-        collaboratorsTitle={trainersData.collaboratorsTitle}
-        collaborators={trainersData.collaborators}
+      {/* Footer */}
+      <Footer
+        creditText={footerData.creditText}
+        academyName={footerData.academyName}
+        academyLink={footerData.academyLink}
+        collaboratorsTitle={footerData.collaboratorsTitle}
+        collaborators={footerData.collaborators}
+        companyDescription={footerData.companyDescription}
+        socialLinks={footerData.socialLinks}
+        navigation={footerData.navigation}
+        copyright={footerData.copyright}
+        legalLinks={footerData.legalLinks}
+        languages={footerData.languages}
       />
     </div>
   );
