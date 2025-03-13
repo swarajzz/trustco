@@ -1,0 +1,145 @@
+.founder-section {
+  padding: 5rem 0;
+}
+
+.founder-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.founder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.founder-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-color);
+}
+
+.founder-quote {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 600px;
+}
+
+.founder-info {
+  margin-top: 1rem;
+}
+
+.founder-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.founder-position {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.founder-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.founder-cta:hover {
+  background-color: #032a3d;
+}
+
+.founder-images {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.founder-main-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.founder-main-image img {
+  object-fit: cover;
+  object-position: top;
+}
+
+.founder-team-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 202px;
+  height: 202px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.founder-crown {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  border-radius: 0 16px 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crown-icon {
+  color: var(--white);
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  .founder-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .founder-content {
+    flex: 1;
+  }
+
+  .founder-images {
+    flex: 1;
+    height: 500px;
+  }
+
+  .founder-team-image {
+    width: 150px;
+    height: 150px;
+    left: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .founder-title {
+    font-size: 3.5rem;
+  }
+
+  .founder-quote {
+    font-size: 1.25rem;
+  }
+
+  .founder-images {
+    height: 600px;
+  }
+}

@@ -4,12 +4,14 @@ import { BrandsSection } from "@/components/brands-section";
 import { SalesSection } from "@/components/sales-section";
 import { BenefitsSection } from "@/components/benefits-section";
 import { StatsSection } from "@/components/stats-section";
+import { FounderSection } from "@/components/founder-section";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
 import { salesData } from "@/data/sales";
 import { benefitsData } from "@/data/benefits";
 import { statsData } from "@/data/stats";
+import { founderData } from "@/data/founder";
 
 export default function Home() {
   return (
@@ -47,6 +49,18 @@ export default function Home() {
 
       {/* Stats Section */}
       <StatsSection stats={statsData} />
+
+      {/* Founder Section */}
+      <FounderSection
+        title={founderData.title}
+        quote={founderData.quote}
+        name={founderData.name}
+        position={founderData.position}
+        founderImage={founderData.founderImage}
+        teamMemberImage={founderData.teamMemberImage}
+        ctaText={founderData.ctaText}
+        ctaLink={founderData.ctaLink}
+      />
     </div>
   );
 }
