@@ -8,6 +8,7 @@ import { FounderSection } from "@/components/founder-section";
 import { BridgesSection } from "@/components/bridges-section";
 import { TestimonialsSection } from "@/components/testimonials-section-static";
 import { BlogSection } from "@/components/blog-section";
+import { CTASection } from "@/components/cta-section";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
@@ -18,6 +19,7 @@ import { founderData } from "@/data/founder";
 import { bridgesData } from "@/data/bridges";
 import { testimonialsData } from "@/data/testimonials";
 import { blogData } from "@/data/blog";
+import { ctaData } from "@/data/cta";
 
 export default function Home() {
   return (
@@ -93,6 +95,15 @@ export default function Home() {
         titleSuffix={blogData.titleSuffix}
         seeAllLink={blogData.seeAllLink}
         posts={blogData.posts}
+      />
+
+      {/* CTA Section */}
+      <CTASection
+        title={ctaData.title}
+        buttonText={ctaData.buttonText}
+        buttonLink={ctaData.buttonLink}
+        subtext={ctaData.subtext}
+        image={ctaData.image}
       />
     </div>
   );
