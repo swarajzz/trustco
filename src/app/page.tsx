@@ -6,6 +6,7 @@ import { BenefitsSection } from "@/components/benefits-section";
 import { StatsSection } from "@/components/stats-section";
 import { FounderSection } from "@/components/founder-section";
 import { BridgesSection } from "@/components/bridges-section";
+import { TestimonialsSection } from "@/components/testimonials-section-static";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
@@ -14,6 +15,7 @@ import { benefitsData } from "@/data/benefits";
 import { statsData } from "@/data/stats";
 import { founderData } from "@/data/founder";
 import { bridgesData } from "@/data/bridges";
+import { testimonialsData } from "@/data/testimonials";
 
 export default function Home() {
   return (
@@ -73,6 +75,13 @@ export default function Home() {
         ctaText={bridgesData.ctaText}
         ctaLink={bridgesData.ctaLink}
         award={bridgesData.award}
+      />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection
+        title={testimonialsData.title}
+        seeAllLink={testimonialsData.seeAllLink}
+        testimonials={testimonialsData.testimonials}
       />
     </div>
   );

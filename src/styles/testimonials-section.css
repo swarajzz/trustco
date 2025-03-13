@@ -1,0 +1,137 @@
+.testimonials-section {
+  padding: 5rem 0;
+  background-color: #f9fafb;
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-color);
+}
+
+.see-all-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color 0.2s ease;
+}
+
+.see-all-link:hover {
+  color: var(--primary-color);
+}
+
+.testimonials-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding-bottom: 1rem;
+}
+
+.testimonials-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.testimonial-card {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.quote-icon {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.author-position {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.testimonials-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-dot.active {
+  width: 24px;
+  border-radius: 9999px;
+  background-color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-title {
+    font-size: 3.5rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1.25rem;
+  }
+}
