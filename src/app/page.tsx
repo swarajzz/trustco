@@ -3,11 +3,13 @@ import { HeroSection } from "@/components/hero-section";
 import { BrandsSection } from "@/components/brands-section";
 import { SalesSection } from "@/components/sales-section";
 import { BenefitsSection } from "@/components/benefits-section";
+import { StatsSection } from "@/components/stats-section";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
 import { salesData } from "@/data/sales";
 import { benefitsData } from "@/data/benefits";
+import { statsData } from "@/data/stats";
 
 export default function Home() {
   return (
@@ -42,6 +44,9 @@ export default function Home() {
         description={benefitsData.description}
         benefits={benefitsData.benefits}
       />
+
+      {/* Stats Section */}
+      <StatsSection stats={statsData} />
     </div>
   );
 }
