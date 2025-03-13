@@ -7,6 +7,7 @@ import { StatsSection } from "@/components/stats-section";
 import { FounderSection } from "@/components/founder-section";
 import { BridgesSection } from "@/components/bridges-section";
 import { TestimonialsSection } from "@/components/testimonials-section-static";
+import { BlogSection } from "@/components/blog-section";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
@@ -16,6 +17,7 @@ import { statsData } from "@/data/stats";
 import { founderData } from "@/data/founder";
 import { bridgesData } from "@/data/bridges";
 import { testimonialsData } from "@/data/testimonials";
+import { blogData } from "@/data/blog";
 
 export default function Home() {
   return (
@@ -82,6 +84,15 @@ export default function Home() {
         title={testimonialsData.title}
         seeAllLink={testimonialsData.seeAllLink}
         testimonials={testimonialsData.testimonials}
+      />
+
+      {/* Blog Section */}
+      <BlogSection
+        title={blogData.title}
+        titleHighlight={blogData.titleHighlight}
+        titleSuffix={blogData.titleSuffix}
+        seeAllLink={blogData.seeAllLink}
+        posts={blogData.posts}
       />
     </div>
   );
