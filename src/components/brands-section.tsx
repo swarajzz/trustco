@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "../styles/brands.css";
 
 interface BrandsProps {
   title: string;
@@ -12,23 +13,23 @@ interface BrandsProps {
 
 export function BrandsSection({ title, brands }: BrandsProps) {
   return (
-    <section className="container mx-auto py-16 px-4 md:px-6">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-        <h2 className="text-xl md:text-2xl font-semibold text-[#12141d] text-center md:text-left whitespace-nowrap">
-          {title}
-        </h2>
-        <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12 w-full">
-          {brands.map((brand) => (
-            <div key={brand.name} className="flex items-center justify-center">
-              <Image
-                src={brand.logo || "/placeholder.svg"}
-                alt={`${brand.name} logo`}
-                width={brand.width}
-                height={brand.height}
-                className="opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </div>
-          ))}
+    <section className="brands-section">
+      <div className="container">
+        <div className="brands-container">
+          <h2 className="brands-title">{title}</h2>
+          <div className="brands-list">
+            {brands.map((brand) => (
+              <div key={brand.name} className="brand-item">
+                <Image
+                  src={brand.logo || "/placeholder.svg"}
+                  alt={`${brand.name} logo`}
+                  width={brand.width}
+                  height={brand.height}
+                  className="brand-logo"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

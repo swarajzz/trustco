@@ -1,0 +1,57 @@
+.brands-section {
+  padding: 4rem 0;
+}
+
+.brands-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brands-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.brand-logo:hover {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .brands-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .brands-title {
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .brands-list {
+    justify-content: space-between;
+  }
+}
+
