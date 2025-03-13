@@ -1,38 +1,17 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import { MainNav } from "@/components/main-nav";
-import { AuthNav } from "@/components/auth-nav";
-import { MobileMenu } from "@/components/mobile-menu";
+import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
-import { mainNavItems, authNavItems } from "@/data/navigation";
-import { heroData, socialElements } from "@/data/hero";
 import { BrandsSection } from "@/components/brands-section";
+import { SalesSection } from "@/components/sales-section";
+import { mainNavItems, authNavItems } from "@/data/navigation";
+import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
+import { salesData } from "@/data/sales";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f2f5f6]">
-      {/* Navigation */}
-      <header className="container mx-auto py-4 px-4 md:px-6">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <Image
-                src="/placeholder.svg?height=40&width=150"
-                alt="Trustco Logo"
-                width={150}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </Link>
-          </div>
-
-          <MainNav items={mainNavItems} />
-          <AuthNav items={authNavItems} />
-          <MobileMenu mainItems={mainNavItems} authItems={authNavItems} />
-        </nav>
-      </header>
+    <div>
+      {/* Header */}
+      <Header mainItems={mainNavItems} authItems={authNavItems} />
 
       {/* Hero Section */}
       <HeroSection
@@ -40,11 +19,19 @@ export default function Home() {
         titleHighlight={heroData.titleHighlight}
         description={heroData.description}
         cta={heroData.cta}
-        socialElements={socialElements}
+        heroImages={heroImages}
       />
 
       {/* Brands Section */}
       <BrandsSection title={brandsData.title} brands={brandsData.brands} />
+
+      {/* Sales Section */}
+      <SalesSection
+        title={salesData.title}
+        highlightText={salesData.highlightText}
+        description={salesData.description}
+        videoThumbnail={salesData.videoThumbnail}
+      />
     </div>
   );
 }

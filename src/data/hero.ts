@@ -18,36 +18,19 @@ export const heroData = {
   ],
 }
 
-export const socialElements = [
+export const heroImages = [
   {
-    type: "social",
-    name: "Instagram",
-    position: "left-10 top-20",
-    size: 40,
+    src: "/images/hero/Hero5.png",
+    alt: "Hero image left",
+    width: 212,
+    height: 340,
+    position: "left"
   },
   {
-    type: "social",
-    name: "Facebook",
-    position: "right-20 top-10",
-    size: 40,
-  },
-  {
-    type: "profile",
-    name: "Profile 1",
-    position: "left-20 bottom-20",
-    size: 80,
-  },
-  {
-    type: "profile",
-    name: "Profile 2",
-    position: "right-10 bottom-40",
-    size: 80,
-  },
-  {
-    type: "social",
-    name: "YouTube",
-    position: "right-40 bottom-10",
-    size: 40,
-  },
-]
-
+    src: "/images/hero/Hero6.png",
+    alt: "Hero image right",
+    width: 212,
+    height: 340,
+    position: "right"
+  }
+];
