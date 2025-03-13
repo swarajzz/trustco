@@ -5,6 +5,7 @@ import "../styles/footer.css";
 
 interface FooterProps {
   // Collaborators section
+  collaboratorSection: boolean;
   creditText: string;
   academyName: string;
   academyLink: string;
@@ -64,6 +65,7 @@ export function Footer({
   copyright,
   legalLinks,
   languages,
+  collaboratorSection = true,
 }: FooterProps) {
   // Function to render social icon based on name
   const renderSocialIcon = (iconName: string) => {
@@ -82,41 +84,45 @@ export function Footer({
   return (
     <footer>
       {/* Collaborators Section */}
-      <section className="collaborators-section">
-        <div className="container">
-          <div className="collaborators-container">
-            <div className="collaborators-credit">
-              <p className="collaborators-credit-text">
-                {creditText}{" "}
-                <Link href={academyLink} className="academy-link">
-                  {academyName}
-                </Link>
-              </p>
-            </div>
+      {collaboratorSection ? (
+        <section className="collaborators-section">
+          <div className="container">
+            <div className="collaborators-container">
+              <div className="collaborators-credit">
+                <p className="collaborators-credit-text">
+                  {creditText}{" "}
+                  <Link href={academyLink} className="academy-link">
+                    {academyName}
+                  </Link>
+                </p>
+              </div>
 
-            <div className="collaborators-list-container">
-              <h3 className="collaborators-title">{collaboratorsTitle}</h3>
-              <div className="collaborators-list">
-                {collaborators.map((collaborator, index) => (
-                  <div key={index} className="collaborator-item">
-                    <Image
-                      src={collaborator.image || "/placeholder.svg"}
-                      alt={collaborator.name}
-                      width={70}
-                      height={70}
-                      style={{
-                        objectFit: "cover",
-                        width: "100%",
-                        height: "100%",
-                      }}
-                    />
-                  </div>
-                ))}
+              <div className="collaborators-list-container">
+                <h3 className="collaborators-title">{collaboratorsTitle}</h3>
+                <div className="collaborators-list">
+                  {collaborators.map((collaborator, index) => (
+                    <div key={index} className="collaborator-item">
+                      <Image
+                        src={collaborator.image || "/placeholder.svg"}
+                        alt={collaborator.name}
+                        width={70}
+                        height={70}
+                        style={{
+                          objectFit: "cover",
+                          width: "100%",
+                          height: "100%",
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        ""
+      )}
 
       {/* Main Footer Section */}
       <section className="main-footer">

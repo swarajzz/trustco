@@ -1,0 +1,68 @@
+.contact-methods {
+  padding: 3rem 0;
+  background-color: #f2f5f6;
+}
+
+.contact-methods-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.contact-method-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.contact-method-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f2f5f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-method-icon svg {
+  color: var(--primary-color);
+}
+
+.contact-method-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+}
+
+.contact-method-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444444;
+  margin-bottom: 1.5rem;
+}
+
+.contact-method-action {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+}
+
+.contact-method-action:hover {
+  color: #032a3d;
+}
+
+@media (min-width: 768px) {
+  .contact-methods-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -121,6 +121,7 @@ export default function Home() {
         copyright={footerData.copyright}
         legalLinks={footerData.legalLinks}
         languages={footerData.languages}
+        collaboratorSection={true}
       />
     </div>
   );
