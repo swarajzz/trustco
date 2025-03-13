@@ -9,6 +9,7 @@ import { BridgesSection } from "@/components/bridges-section";
 import { TestimonialsSection } from "@/components/testimonials-section-static";
 import { BlogSection } from "@/components/blog-section";
 import { CTASection } from "@/components/cta-section";
+import { TrainersSection } from "@/components/trainers-section";
 import { mainNavItems, authNavItems } from "@/data/navigation";
 import { heroData, heroImages } from "@/data/hero";
 import { brandsData } from "@/data/brands";
@@ -20,6 +21,7 @@ import { bridgesData } from "@/data/bridges";
 import { testimonialsData } from "@/data/testimonials";
 import { blogData } from "@/data/blog";
 import { ctaData } from "@/data/cta";
+import { trainersData } from "@/data/trainers";
 
 export default function Home() {
   return (
@@ -104,6 +106,15 @@ export default function Home() {
         buttonLink={ctaData.buttonLink}
         subtext={ctaData.subtext}
         image={ctaData.image}
+      />
+
+      {/* Trainers Section */}
+      <TrainersSection
+        creditText={trainersData.creditText}
+        academyName={trainersData.academyName}
+        academyLink={trainersData.academyLink}
+        collaboratorsTitle={trainersData.collaboratorsTitle}
+        collaborators={trainersData.collaborators}
       />
     </div>
   );
