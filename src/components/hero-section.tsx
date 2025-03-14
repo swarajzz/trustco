@@ -31,12 +31,12 @@ export function HeroSection({
 }: HeroProps) {
   return (
     <section className="hero-section">
-      <div className="container">
-        {/* Hero Images */}
+      <div className="container hero-container">
+        {/* Desktop Hero Images - Only visible on desktop */}
         {heroImages.map((image, index) => (
           <div
-            key={index}
-            className={`hero-image hero-image-${image.position}`}
+            key={`desktop-${index}`}
+            className={`hero-image-desktop hero-image-${image.position}`}
           >
             <Image
               src={image.src || "/placeholder.svg"}
@@ -72,6 +72,20 @@ export function HeroSection({
               </Link>
             ))}
           </div>
+        </div>
+
+        {/* Mobile Hero Images - Only visible on mobile */}
+        <div className="hero-images-mobile">
+          {heroImages.map((image, index) => (
+            <div key={`mobile-${index}`} className="hero-image-mobile">
+              <Image
+                src={image.src || "/placeholder.svg"}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
