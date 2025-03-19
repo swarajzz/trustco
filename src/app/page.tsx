@@ -90,6 +90,7 @@ export default function Home() {
         title={testimonialsData.title}
         seeAllLink={testimonialsData.seeAllLink}
         testimonials={testimonialsData.testimonials}
+        quoteIcon={testimonialsData.quoteIcon}
       />
 
       {/* Blog Section */}

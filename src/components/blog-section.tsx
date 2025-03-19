@@ -35,10 +35,13 @@ export function BlogSection({
             <span className="blog-title-highlight">{titleHighlight}</span>{" "}
             {titleSuffix}
           </h2>
-          <Link href={seeAllLink} className="see-all-link">
-            See All
-            <ArrowRight size={18} />
-          </Link>
+
+          <div className="desktop-see-all">
+            <Link href={seeAllLink} className="see-all-link">
+              See All
+              <ArrowRight size={18} />
+            </Link>
+          </div>
         </div>
 
         <div className="blog-grid">
@@ -67,6 +70,13 @@ export function BlogSection({
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="see-all-container">
+          <Link href={seeAllLink} className="see-all-link">
+            See All
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </section>
