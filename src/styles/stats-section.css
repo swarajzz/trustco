@@ -1,6 +1,7 @@
 .stats-section {
   padding: 5rem 0;
   background-color: white;
+  order: 1;
 }
 
 .stats-container {
@@ -43,6 +44,9 @@
 }
 
 @media (min-width: 768px) {
+  .stats-section {
+    order: 0;
+  }
   .stat-item {
     min-width: auto;
   }

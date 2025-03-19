@@ -39,6 +39,7 @@
   font-size: 1.125rem;
   line-height: 1.6;
   color: var(--text-color);
+  text-align: center;
 }
 
 .benefits-grid {

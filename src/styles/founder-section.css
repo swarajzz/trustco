@@ -1,5 +1,7 @@
 .founder-section {
   padding: 5rem 0;
+  order: 2;
+  background-color: white;
 }
 
 .founder-container {
@@ -14,6 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 }
 
 .founder-title {
@@ -112,6 +115,9 @@
 }
 
 @media (min-width: 768px) {
+  .founder-section {
+    order: 1;
+  }
   .founder-container {
     flex-direction: row;
     text-align: start;
@@ -131,6 +137,7 @@
 
   .founder-content {
     flex: 1;
+    align-items: start;
   }
 
   .founder-title {

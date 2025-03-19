@@ -45,6 +45,11 @@ img {
   height: auto;
 }
 
+.order-section {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1024px) {
   .container {
     padding: 0 2rem;

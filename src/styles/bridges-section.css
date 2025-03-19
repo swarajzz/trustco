@@ -1,5 +1,6 @@
 .bridges-section {
   padding: 5rem 0;
+  background-color: white;
 }
 
 .bridges-container {
@@ -12,6 +13,7 @@
   position: relative;
   width: 100%;
   height: 400px;
+  order: 2;
 }
 
 .bridges-image {
@@ -67,6 +69,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  align-items: center;
+  text-align: center;
 }
 
 .bridges-title {
@@ -106,6 +110,9 @@
 }
 
 @media (min-width: 768px) {
+  .bridges-section {
+    order: 2;
+  }
   .bridges-container {
     flex-direction: row;
     align-items: center;
@@ -119,6 +126,7 @@
   .bridges-content {
     flex: 1;
     padding-left: 2rem;
+    text-align: start;
   }
 }
 
