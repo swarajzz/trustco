@@ -1,45 +1,42 @@
 .blog-section {
   padding: 5rem 0;
+  background-color: #ffffff;
 }
 
 .blog-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .blog-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.1;
   color: var(--text-color);
+  margin-bottom: 1rem;
 }
 
 .blog-title-highlight {
   color: var(--primary-color);
 }
 
-.see-all-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  color: var(--text-color);
-  transition: color 0.2s ease;
-}
-
-.see-all-link:hover {
-  color: var(--primary-color);
-}
-
 .blog-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.blog-grid::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .blog-card {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
   background-color: var(--white);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -105,18 +102,72 @@
   color: var(--primary-color);
 }
 
+.see-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.see-all-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color 0.2s ease;
+}
+
+.see-all-link:hover {
+  color: var(--primary-color);
+}
+
+.desktop-see-all {
+  display: none;
+}
+
 @media (min-width: 640px) {
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .blog-card {
+    flex: 0 0 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-title {
+    font-size: 3rem;
+  }
+
+  .blog-card {
+    flex: 0 0 45%;
   }
 }
 
 @media (min-width: 1024px) {
-  .blog-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .blog-title {
     font-size: 3.5rem;
+  }
+
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+  }
+
+  .blog-card {
+    flex: none;
+  }
+
+  .desktop-see-all {
+    display: block;
+  }
+
+  .see-all-container {
+    display: none;
   }
 }

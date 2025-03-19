@@ -31,4 +31,5 @@ export const testimonialsData = {
       avatar: "/placeholder.svg?height=80&width=80",
     },
   ],
+  quoteIcon: "/images/icons/quote.svg"
 };

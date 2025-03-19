@@ -36,7 +36,7 @@ export function FounderSection({
               <div className="founder-position">{position}</div>
             </div>
             <Link href={ctaLink} className="founder-cta">
-              {ctaText}
+              <span>{ctaText}</span>
               <ArrowRight size={18} />
             </Link>
           </div>
@@ -50,7 +50,7 @@ export function FounderSection({
                 style={{ objectFit: "cover", objectPosition: "top" }}
               />
             </div>
-            <div className="founder-team-image">
+            {/* <div className="founder-team-image">
               <Image
                 src={teamMemberImage || "/placeholder.svg"}
                 alt="Team member"
@@ -60,7 +60,7 @@ export function FounderSection({
             </div>
             <div className="founder-crown">
               <Crown size={30} className="crown-icon" />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

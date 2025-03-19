@@ -57,37 +57,40 @@ export default function Home() {
         benefits={benefitsData.benefits}
       />
 
-      {/* Stats Section */}
-      <StatsSection stats={statsData} />
+      <div className="order-section">
+        {/* Stats Section */}
+        <StatsSection stats={statsData} />
 
-      {/* Founder Section */}
-      <FounderSection
-        title={founderData.title}
-        quote={founderData.quote}
-        name={founderData.name}
-        position={founderData.position}
-        founderImage={founderData.founderImage}
-        teamMemberImage={founderData.teamMemberImage}
-        ctaText={founderData.ctaText}
-        ctaLink={founderData.ctaLink}
-      />
+        {/* Founder Section */}
+        <FounderSection
+          title={founderData.title}
+          quote={founderData.quote}
+          name={founderData.name}
+          position={founderData.position}
+          founderImage={founderData.founderImage}
+          teamMemberImage={founderData.teamMemberImage}
+          ctaText={founderData.ctaText}
+          ctaLink={founderData.ctaLink}
+        />
 
-      {/* Bridges Section */}
-      <BridgesSection
-        title={bridgesData.title}
-        highlightText={bridgesData.highlightText}
-        description={bridgesData.description}
-        image={bridgesData.image}
-        ctaText={bridgesData.ctaText}
-        ctaLink={bridgesData.ctaLink}
-        award={bridgesData.award}
-      />
+        {/* Bridges Section */}
+        <BridgesSection
+          title={bridgesData.title}
+          highlightText={bridgesData.highlightText}
+          description={bridgesData.description}
+          image={bridgesData.image}
+          ctaText={bridgesData.ctaText}
+          ctaLink={bridgesData.ctaLink}
+          award={bridgesData.award}
+        />
+      </div>
 
       {/* Testimonials Section */}
       <TestimonialsSection
         title={testimonialsData.title}
         seeAllLink={testimonialsData.seeAllLink}
         testimonials={testimonialsData.testimonials}
+        quoteIcon={testimonialsData.quoteIcon}
       />
 
       {/* Blog Section */}
