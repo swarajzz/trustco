@@ -43,15 +43,6 @@ export function CTASection({
           </div>
         </div>
       </div>
-
-      {/* Decorative elements */}
-      <div className="cta-decoration-1"></div>
-      <div className="cta-decoration-2">
-        <Crown size={30} className="decoration-icon" />
-      </div>
-      <div className="cta-decoration-3">
-        <Search size={24} className="decoration-icon" />
-      </div>
     </section>
   );
 }

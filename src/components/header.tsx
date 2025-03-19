@@ -17,7 +17,6 @@ export function Header({ mainItems, authItems }: HeaderProps) {
 
   return (
     <header className="header">
-      <div className="container">
         <nav className="nav">
           <div>
             <Link href="/">
@@ -56,7 +55,6 @@ export function Header({ mainItems, authItems }: HeaderProps) {
             <Menu size={24} />
           </button>
         </nav>
-      </div>
 
       {isMenuOpen && (
         <div className="mobile-menu">

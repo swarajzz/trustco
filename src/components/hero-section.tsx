@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Play } from "lucide-react";
+import { Play, PlayIcon } from "lucide-react";
 import "../styles/hero.css";
 
 interface HeroProps {
@@ -66,7 +66,9 @@ export function HeroSection({
                 }
               >
                 {button.icon === "play" && (
-                  <Play size={18} className="play-icon" />
+                  <div className="icon-circle">
+                    <PlayIcon size={18} className="play-icon" />
+                  </div>
                 )}
                 {button.title}
               </Link>
