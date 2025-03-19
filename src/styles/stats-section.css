@@ -1,5 +1,6 @@
 .stats-section {
   padding: 5rem 0;
+  background-color: white;
 }
 
 .stats-container {
@@ -27,7 +28,7 @@
   color: var(--text-color);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 320px) {
   .stats-container {
     flex-direction: row;
     flex-wrap: wrap;
