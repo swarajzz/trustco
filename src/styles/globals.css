@@ -26,7 +26,7 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 7.5rem;
 }
 
 a {
@@ -43,4 +43,10 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
