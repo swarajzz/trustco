@@ -28,7 +28,7 @@ export function BridgesSection({
 }: BridgesSectionProps) {
   return (
     <section className="bridges-section">
-      <div className="container">
+      {/* <div className="container"> */}
         <div className="bridges-container">
           <div className="bridges-image-container">
             <div className="bridges-image">
@@ -58,7 +58,7 @@ export function BridgesSection({
             </Link>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   );
 }

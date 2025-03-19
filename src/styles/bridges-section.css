@@ -1,5 +1,5 @@
 .bridges-section {
-  padding: 5rem 0 0;
+  padding: 5rem 0;
   background-color: white;
 }
 
@@ -127,6 +127,7 @@
     flex: 1;
     padding-left: 2rem;
     text-align: start;
+    order: 2;
   }
 }
 
